@@ -1,0 +1,61 @@
+/* Ensure no padding for the main content list and set height with overflow for vertical scrolling */
+.ul-content {
+  padding-left: 0;
+
+  overflow-y: auto;
+  margin: 0px !important; /* Ensure no margin for consistency */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.ul-content ::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ul-content {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ensure no list style for content list items */
+.li-content {
+  list-style: none;
+  margin: 10px 0; /* Add some spacing between sections */
+}
+
+/* Flexbox to align items horizontally and allow horizontal scrolling */
+.ul-items {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  flex-shrink: 0;
+  overflow-x: auto;
+  margin: 0; /* Ensure no margin for consistency */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.ul-items ::-webkit-scrollbar {
+  display: none;
+}
+.name1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.ul-items {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Styles for individual product items */
+@media screen and (min-width: 767px) {
+  .ul-content {
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ul-content {
+    height: 80vh;
+  }
+}

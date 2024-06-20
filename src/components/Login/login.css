@@ -1,0 +1,79 @@
+.login-bg-container {
+  background-image: url('https://res.cloudinary.com/dtc3rf1du/image/upload/v1718270367/nxtMart/euuih0rgmdafkdejee3l.png');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  width: 70%;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.login-logo {
+  width: 25%;
+  align-self: center;
+}
+.error-msg {
+  color: red;
+  font-size: 13px;
+}
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+  border: 1px solid #cac6c6;
+  margin: 5px 5px;
+}
+.label {
+  color: rgb(129, 126, 123);
+  font-size: 15px;
+  margin: 5px 5px;
+}
+.input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 90%;
+  padding-left: 5px;
+}
+.login-btn {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 5px;
+  color: white;
+}
+.login-green {
+  background-color: green;
+  color: white;
+}
+.login-ash {
+  background-color: #9f9696;
+}
+
+@media screen and (max-width: 767px) {
+  .login-logo {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .form-container {
+    width: 30%;
+  }
+  .login-bg-container {
+    background-image: url('https://res.cloudinary.com/dtc3rf1du/image/upload/v1718270374/nxtMart/hjzsz4osvaiwbupqtfvb.png');
+    background-size: cover;
+  }
+}

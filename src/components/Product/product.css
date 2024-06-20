@@ -1,0 +1,84 @@
+.li-items {
+  height: 150px;
+  min-width: 140px;
+  box-shadow: 0px 0px 1px 0px #000;
+  padding: 5px;
+  list-style: none;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  background-color: #fff; /* Ensure background color for better visibility */
+}
+.img-size {
+  height: 50px;
+  width: 70px;
+  border-radius: 5px;
+  align-self: center;
+}
+.product-details {
+  display: flex;
+
+  justify-content: space-between;
+}
+.details {
+  display: inline;
+  flex-direction: column;
+}
+.name {
+  font-size: 10px;
+  color: black;
+  font-weight: bold;
+}
+.weight {
+  font-size: 10px;
+  color: rgb(161, 165, 169);
+}
+.price {
+  font-size: 10px;
+  color: #000;
+  font-weight: bold;
+}
+.add-btn {
+  height: 25px;
+  width: 50px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid green;
+  background-color: white;
+  color: green;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.quantity-container1 {
+  height: 30px;
+  width: 60px;
+  border: 1px solid green;
+  color: rgb(11, 120, 11);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-end;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 5px;
+}
+.btm {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: green;
+  font-size: 13px;
+  padding: 0px;
+}
+.count1 {
+  color: green;
+  font-size: 12px;
+  display: inline;
+  margin-bottom: 0px;
+}
