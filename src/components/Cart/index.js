@@ -1,8 +1,8 @@
 import './cart.css'
 import {useContext, useState} from 'react'
 import {useHistory} from 'react-router-dom'
-import {CiShoppingCart} from 'react-icons/ci'
 import {IoIosArrowRoundBack} from 'react-icons/io'
+import {IoCheckmarkCircleOutline} from 'react-icons/io5'
 
 import ReactContext from '../../context/ReactContext'
 import Footer from '../Footer'
@@ -70,13 +70,9 @@ const Cart = () => {
     <>
       {isCheckOut ? (
         <div className="checkout-bg">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-empty-cart-img.png"
-            className="cart-empty-img"
-            alt="empty cart"
-          />
+          <IoCheckmarkCircleOutline color="green" size={30} />
           <h1 className="checkout-head">Payment Successful</h1>
-          <p className="thank-you">Thank you for ordering.</p>
+          <p className="thank-you">Thank you for ordering</p>
           <p className="thank-you">Your Payment is Sucessfully completed.</p>
           <button className=" btn-return" onClick={onReturnHome} type="button">
             Return to Homepage
@@ -84,8 +80,12 @@ const Cart = () => {
         </div>
       ) : (
         <div className="empty-cart">
-          <CiShoppingCart color="green" size={50} />
-          <p className="cart-p">Your Cart is Empty</p>
+          <img
+            src="https://res.cloudinary.com/dtc3rf1du/image/upload/v1718269990/nxtMart/ybmj9lvlw4hayzbwyy6x.png"
+            alt="empty cart"
+            className="empty-cart-img"
+          />
+          <h1 className="cart-h1">Your cart is empty</h1>
           <button type="button" onClick={onReturnHome} className="return-home">
             Return to Homepage
           </button>

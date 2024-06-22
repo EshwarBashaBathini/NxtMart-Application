@@ -5,9 +5,7 @@ import ReactContext from '../../context/ReactContext'
 const CartItem = props => {
   const {product} = props
   const {decremantCartItem, incrementCartItem} = useContext(ReactContext)
-  const {name, price, weight, quantity} = product
-  const images =
-    'https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp'
+  const {name, price, weight, image, quantity} = product
 
   const onIncrement = () => {
     incrementCartItem(product, quantity + 1)
@@ -17,10 +15,10 @@ const CartItem = props => {
   }
 
   return (
-    <li data-testid="cartItem" className="cart-list">
+    <li data-testid="cart-list" className="cart-list">
       <div className="cart-li">
         <div className="cart-details">
-          <img src={images} alt={name} className="cart-img" />
+          <img src={image} alt={name} className="cart-img" />
           <div className="cart-name-details">
             <p className="cart-name">{name}</p>
             <p className="cart-weight">{weight}</p>

@@ -8,7 +8,7 @@ const Content = props => {
       <ul className="ul-content">
         {productDetails.map(item => (
           <li key={item.name} id={item.name} className="li-content">
-            <h1 className="name1">{item.name} &gt;</h1>
+            <p className="name1">{item.name} &gt;</p>
             <ul className="ul-items">
               {item.products.map(items => (
                 <Product key={items.id} details={items} />

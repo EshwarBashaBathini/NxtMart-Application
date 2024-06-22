@@ -20,10 +20,10 @@ const CartSummary = props => {
 
   return (
     <div className="summary-div">
-      <p className="summaary-p">
-        Total ({cartList.length} {cartList.length > 1 ? 'items' : 'item'}) : $
-        <span data-testid="total-price">{renderPrice()}</span>
-      </p>
+      <h1 className="summaary-p">
+        Total ({cartList.length} items :) ₹
+        <p data-testid="total-price">{renderPrice()}</p>
+      </h1>
 
       <button type="button" onClick={onCheckOut} className="checkout">
         Checkout

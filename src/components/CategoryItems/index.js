@@ -15,7 +15,7 @@ const CategoryItems = props => {
           className="cat-li"
         >
           <button type="button" className={`cat-btn ${values}`}>
-            <a href="#Vegetables" className={` ${values}`}>
+            <a href="#Fruits & Vegetables" className={` ${values}`}>
               All
             </a>
           </button>

@@ -49,8 +49,8 @@ const Login = props => {
       method: 'POST',
       body: JSON.stringify(userDetails),
     }
-    const apiUrl = 'https://apis.ccbp.in/login'
-    const response = await fetch(apiUrl, options)
+    const loginApiUrl = 'https://apis.ccbp.in/login'
+    const response = await fetch(loginApiUrl, options)
     const data = await response.json()
     setPassword('')
     setUsername('')
@@ -75,7 +75,7 @@ const Login = props => {
           className="login-logo"
         />
         <label htmlFor="username" className="label">
-          Username
+          USERNAME
         </label>
         <div className="input-container">
           <CgProfile />
@@ -87,7 +87,7 @@ const Login = props => {
           />
         </div>
         <label htmlFor="password" className="label">
-          Password
+          PASSWORD
         </label>
         <div className="input-container">
           <RiRotateLockLine />

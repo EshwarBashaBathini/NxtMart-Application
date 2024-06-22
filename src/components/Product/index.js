@@ -6,7 +6,7 @@ const Product = props => {
   const [quantity, setQuantity] = useState(0)
   const {decremantCartItem, incrementCartItem} = useContext(ReactContext)
   const {details} = props
-  const {name, price, weight} = details
+  const {name, price, weight, image} = details
   const onDecrement = () => {
     setQuantity(prevqun => prevqun - 1)
     decremantCartItem(details, quantity - 1)
@@ -15,15 +15,15 @@ const Product = props => {
     setQuantity(prevqun => prevqun + 1)
     incrementCartItem(details, quantity + 1)
   }
-  const images =
-    'https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp'
 
   return (
     <li className="li-items" data-testid="product">
-      <img src={images} alt={name} className="img-size" />
+      <img src={image} alt={name} className="img-size" />
+      <div className="overflow-name">
+        <p className="product-name">{name}</p>
+      </div>
       <div className="product-details">
         <div className="details">
-          <p className="name">{name}</p>
           <p className="weight">{weight}</p>
           <p className="price">{price}</p>
         </div>
@@ -47,9 +47,13 @@ const Product = props => {
             >
               -
             </button>
-            <p className="count1" data-testid="active-count">
+            <button
+              type="button"
+              className="count1 btm"
+              data-testid="active-count"
+            >
               {quantity}
-            </p>
+            </button>
             <button
               type="button"
               data-testid="increment-count"

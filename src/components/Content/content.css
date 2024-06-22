@@ -1,6 +1,6 @@
 /* Ensure no padding for the main content list and set height with overflow for vertical scrolling */
 .ul-content {
-  padding-left: 0;
+  padding-left: 10px;
 
   overflow-y: auto;
   margin: 0px !important; /* Ensure no margin for consistency */

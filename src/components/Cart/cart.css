@@ -42,13 +42,16 @@
   align-items: center;
   justify-content: center;
 }
+.empty-cart-img {
+  width: 20%;
+}
 .cart-container {
   width: 90%;
   border: 1px solid #a2a1a1;
   border-radius: 10px;
   min-height: 350px;
 }
-.cart-p {
+.cart-h1 {
   color: rgb(133, 132, 130);
   font-size: 15px;
 }

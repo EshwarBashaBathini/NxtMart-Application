@@ -7,7 +7,7 @@
   padding-left: 0px;
   overflow-y: auto;
   height: 65vh;
-  width: 170px;
+  width: 180px;
   font-family: 'Roboto';
   background-color: white;
   align-self: center;
@@ -35,7 +35,10 @@
   height: 40px;
   width: 150px;
   list-style-type: none;
-  padding: 10px;
+  margin: 5px 5px;
+}
+.cat-btn::-webkit-scrollbar {
+  display: none;
 }
 
 .cat-btn {
@@ -47,8 +50,15 @@
   background: none;
   font-size: 13px;
   color: black;
+  white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
   height: 40px;
 }
+.cat-li:hover {
+  background-color: #f0f0f0;
+}
+
 @media screen and (min-width: 767px) {
   .category {
     display: flex;

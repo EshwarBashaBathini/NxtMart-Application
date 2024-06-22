@@ -9,7 +9,6 @@
 
 .logo-size {
   width: 90px;
-  
 }
 .ul-nav-lg {
   display: flex;
@@ -48,8 +47,13 @@
 @media screen and (min-width: 767px) {
   .nav-container-lg {
     display: flex;
+    padding: 10px;
   }
 }
 .green-color {
   color: green;
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
 }
