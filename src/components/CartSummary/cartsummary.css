@@ -4,6 +4,7 @@
   justify-content: flex-end;
   padding: 10px;
   margin: 0px;
+  width: 100%;
 }
 .checkout {
   height: 35px;
@@ -21,4 +22,7 @@
   font-size: 13px;
   color: black;
   margin-bottom: 0px;
+}
+.price-total{
+  display: inline;
 }

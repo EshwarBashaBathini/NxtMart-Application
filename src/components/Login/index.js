@@ -34,8 +34,9 @@ const Login = props => {
     const {history} = props
     Cookies.set('jwt_token', jwtToken, {expires: 2})
     setNewTab('Home')
-    setLogined(true)
+
     history.replace('/')
+    setLogined(true)
   }
 
   const onSubmit = async event => {
@@ -81,6 +82,7 @@ const Login = props => {
           <CgProfile />
           <input
             type="text"
+            id="username"
             value={username}
             onChange={onUsername}
             className="input"

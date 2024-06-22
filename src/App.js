@@ -1,5 +1,4 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import {useState, useEffect} from 'react'
 import {Switch, Route, Redirect} from 'react-router-dom'
 import Login from './components/Login'

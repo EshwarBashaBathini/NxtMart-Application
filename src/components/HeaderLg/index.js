@@ -27,18 +27,26 @@ const HeaderLg = props => {
       </Link>
       <ul className="ul-nav-lg">
         <li className="li-nav-lg">
-          <Link to="/" className="links" onClick={() => setNewTab('Home')}>
-            <button type="button" className={`nav-btn ${homeTab}`}>
+          <button
+            type="button"
+            onClick={() => setNewTab('Home')}
+            className={`nav-btn ${homeTab}`}
+          >
+            <Link to="/" className="links">
               Home
-            </button>
-          </Link>
+            </Link>
+          </button>
         </li>
         <li className="li-nav-lg">
-          <Link to="/cart" className="links" onClick={() => setNewTab('Cart')}>
-            <button type="button" className={`nav-btn ${cartTab}`}>
+          <button
+            type="button"
+            onClick={() => setNewTab('Cart')}
+            className={`nav-btn ${cartTab}`}
+          >
+            <Link to="/cart" className="links">
               Cart
-            </button>
-          </Link>
+            </Link>
+          </button>
         </li>
         <li className="li-nav-lg" onClick={onLogoutBtn}>
           <button type="button" className="nav-btn">

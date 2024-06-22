@@ -51,8 +51,8 @@
   font-size: 13px;
   color: black;
   white-space: nowrap;
- overflow: hidden;
- text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
   height: 40px;
 }
 .cat-li:hover {

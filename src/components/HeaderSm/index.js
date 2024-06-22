@@ -21,28 +21,28 @@ const HeaderSm = props => {
     <nav className="nav-container-sm fixed-bottom">
       <ul className="ul-nav-sm">
         <li className="li-nav-lg">
-          <Link to="/" className="links">
-            <button
-              type="button"
-              onClick={() => setNewTab('Home')}
-              className={`nav-btn-1 ${homeTab}`}
-            >
+          <button
+            type="button"
+            onClick={() => setNewTab('Home')}
+            className={`nav-btn-1 ${homeTab}`}
+          >
+            <Link to="/" className="links">
               <IoIosHome size={20} color={homeTab} />
               Home
-            </button>
-          </Link>
+            </Link>
+          </button>
         </li>
         <li className="li-nav-lg">
-          <Link to="/cart" className="links">
-            <button
-              type="button"
-              onClick={() => setNewTab('Cart')}
-              className={`nav-btn-1 ${cartTab}`}
-            >
+          <button
+            type="button"
+            onClick={() => setNewTab('Cart')}
+            className={`nav-btn-1 ${cartTab}`}
+          >
+            <Link to="/cart" className="links">
               <CiShoppingCart size={20} />
               Cart
-            </button>
-          </Link>
+            </Link>
+          </button>
         </li>
         <li className="li-nav-lg" onClick={onLogoutBtn}>
           <button type="button" className="nav-btn-1">
