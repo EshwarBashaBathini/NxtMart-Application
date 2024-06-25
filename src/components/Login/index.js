@@ -10,7 +10,7 @@ const Login = props => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [errMsg, setErrMsg] = useState('')
-  const {setNewTab, setLogined} = useContext(ReactContext)
+  const {setNewTab} = useContext(ReactContext)
 
   const onShowPassword = () => {
     const passwordEl = document.getElementById('password')
@@ -21,7 +21,7 @@ const Login = props => {
     }
   }
   let bgColor
-  if (username !== '' && password.length === 10) {
+  if (username !== '' && password !== '') {
     bgColor = 'login-green'
   } else {
     bgColor = 'login-ash'
@@ -34,9 +34,7 @@ const Login = props => {
     const {history} = props
     Cookies.set('jwt_token', jwtToken, {expires: 2})
     setNewTab('Home')
-
     history.replace('/')
-    setLogined(true)
   }
 
   const onSubmit = async event => {

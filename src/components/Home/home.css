@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
 }
 
 .home-container {
@@ -26,7 +26,10 @@
   padding: 10px;
   /* Optional: Set a background color for better visibility */
 }
-
+.instr-head {
+  font-size: 10px;
+  font-weight: normal;
+}
 /* Additional CSS to ensure smooth scrolling */
 .items::-webkit-scrollbar {
   display: none; /* Hide scrollbar for WebKit browsers */

@@ -25,6 +25,10 @@
   text-decoration: none;
   color: rgb(165, 178, 177);
 }
+.header-route-p {
+  font-size: 13px;
+  color: rgb(165, 178, 177);
+}
 .links-Cliked {
   text-decoration: underline;
   text-underline-offset: 8px;
@@ -40,6 +44,9 @@
 }
 @media screen and (max-width: 767px) {
   .nav-container-lg {
+    display: none;
+  }
+  .green-color {
     display: none;
   }
 }

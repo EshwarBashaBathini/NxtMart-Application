@@ -17,8 +17,8 @@ const HeaderLg = props => {
   }
 
   return (
-    <nav className="nav-container-lg">
-      <Link to="/" className="links" onClick={() => setNewTab('Home')}>
+    <header className="nav-container-lg">
+      <Link to="/" className="links">
         <img
           src="https://res.cloudinary.com/dtc3rf1du/image/upload/v1718269995/nxtMart/fkvjpdhfywcpdzngq2le.png"
           alt="website logo"
@@ -26,35 +26,28 @@ const HeaderLg = props => {
         />
       </Link>
       <ul className="ul-nav-lg">
-        <li className="li-nav-lg">
-          <button
-            type="button"
-            onClick={() => setNewTab('Home')}
-            className={`nav-btn ${homeTab}`}
-          >
-            <Link to="/" className="links">
-              Home
-            </Link>
-          </button>
+        <li onClick={() => setNewTab('Home')} className="li-nav-lg">
+          <Link to="/" className={`links ${homeTab}`}>
+            <h1 className="header-route-p">Home</h1>
+          </Link>
         </li>
-        <li className="li-nav-lg">
-          <button
-            type="button"
-            onClick={() => setNewTab('Cart')}
-            className={`nav-btn ${cartTab}`}
-          >
-            <Link to="/cart" className="links">
-              Cart
-            </Link>
-          </button>
+        <li
+          type="button"
+          onClick={() => setNewTab('Cart')}
+          className="li-nav-lg"
+        >
+          <Link to="/cart" className={`links ${cartTab}`}>
+            <h1 className="header-route-p">Cart</h1>
+          </Link>
         </li>
         <li className="li-nav-lg" onClick={onLogoutBtn}>
           <button type="button" className="nav-btn">
-            <BiLogOut /> Logout
+            <BiLogOut />
+            Logout
           </button>
         </li>
       </ul>
-    </nav>
+    </header>
   )
 }
 

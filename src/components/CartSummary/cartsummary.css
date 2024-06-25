@@ -21,8 +21,11 @@
 .summaary-p {
   font-size: 13px;
   color: black;
+  font-weight: normal;
   margin-bottom: 0px;
 }
-.price-total{
+.price-total {
   display: inline;
+  font-weight: normal;
+  font-size: 13px;
 }

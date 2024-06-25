@@ -31,22 +31,23 @@
 .links {
   text-decoration: none;
   color: rgb(136, 142, 141);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .links-Cliked {
   text-decoration: underline;
   text-underline-offset: 8px;
 }
+
 .nav-btn-1 {
   outline: none;
   border: none;
   cursor: pointer;
   color: rgb(165, 178, 177);
   background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -60,6 +61,6 @@
     display: none;
   }
 }
-.green-color {
+.green-color1 {
   color: green;
 }

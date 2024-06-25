@@ -21,9 +21,9 @@ const CartSummary = props => {
   return (
     <div className="summary-div">
       <h1 className="summaary-p">
-        Total ({cartList.length} items :) ₹
+        Total ({cartList.length} items) :
         <p className="price-total" data-testid="total-price">
-          {renderPrice()}
+          {`₹ ${renderPrice()}`}
         </p>
       </h1>
 

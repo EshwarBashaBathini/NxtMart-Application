@@ -10,8 +10,8 @@ import ReactContext from '../../context/ReactContext'
 const HeaderSm = props => {
   const {history} = props
   const {activeTab, setNewTab} = useContext(ReactContext)
-  const homeTab = activeTab === 'Home' ? 'green-color' : null
-  const cartTab = activeTab === 'Cart' ? 'green-color' : null
+  const homeTab = activeTab === 'Home' ? 'green-color1' : ''
+  const cartTab = activeTab === 'Cart' ? 'green-color1' : ''
 
   const onLogoutBtn = () => {
     Cookies.remove('jwt_token')
@@ -24,9 +24,9 @@ const HeaderSm = props => {
           <button
             type="button"
             onClick={() => setNewTab('Home')}
-            className={`nav-btn-1 ${homeTab}`}
+            className="nav-btn-1"
           >
-            <Link to="/" className="links">
+            <Link to="/" className={`links ${homeTab}`}>
               <IoIosHome size={20} color={homeTab} />
               Home
             </Link>
@@ -36,9 +36,9 @@ const HeaderSm = props => {
           <button
             type="button"
             onClick={() => setNewTab('Cart')}
-            className={`nav-btn-1 ${cartTab}`}
+            className="nav-btn-1"
           >
-            <Link to="/cart" className="links">
+            <Link to="/cart" className={`links ${cartTab}`}>
               <CiShoppingCart size={20} />
               Cart
             </Link>
