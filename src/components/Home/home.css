@@ -66,4 +66,16 @@
   .failure-container {
     height: 90vh;
   }
+  .header-lg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .header-lg {
+    display: block;
+  }
+  .header-sm {
+    display: none;
+  }
 }

@@ -6,8 +6,7 @@ import {IoCheckmarkCircleOutline} from 'react-icons/io5'
 
 import ReactContext from '../../context/ReactContext'
 import Footer from '../Footer'
-import HeaderSm from '../HeaderSm'
-import HeaderLg from '../HeaderLg'
+import Header from '../Header'
 import CartItem from '../CartItem'
 import CartSummary from '../CartSummary'
 
@@ -97,9 +96,15 @@ const Cart = () => {
 
   return (
     <div className="home-container1">
-      <HeaderLg />
+      <div className="header-lg">
+        <Header />
+      </div>
+
       {cartList.length === 0 ? renderEmptyCart() : renderSuccess()}
-      <HeaderSm />
+
+      <div className="header-sm">
+        <Header />
+      </div>
     </div>
   )
 }

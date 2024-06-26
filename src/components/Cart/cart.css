@@ -31,7 +31,6 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 450px;
 }
 .items-head {
   font-size: 15px;
@@ -150,7 +149,7 @@
   .empty-cart {
     height: 90vh;
   }
-  .checkout-bg{
+  .checkout-bg {
     height: 90vh;
   }
 }
@@ -163,6 +162,7 @@
 @media screen and (min-width: 768px) {
   .cart-success {
     display: block;
+    height: 73vh;
   }
   .cart-success-sm {
     display: none;
@@ -175,5 +175,8 @@
   }
   .cart-h2 {
     display: none;
+  }
+  .checkout-bg {
+    height: 73vh;
   }
 }

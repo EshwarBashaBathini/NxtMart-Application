@@ -2,11 +2,10 @@ import './home.css'
 import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import HeaderLg from '../HeaderLg'
+import Header from '../Header'
 import CategoryItems from '../CategoryItems'
 import Content from '../Content'
 import Footer from '../Footer'
-import HeaderSm from '../HeaderSm'
 import CategorySmItem from '../CategorySmItem'
 
 const constApiStatus = {
@@ -110,9 +109,14 @@ const Home = () => {
 
   return (
     <div className="home-container1">
-      <HeaderLg />
+      <div className="header-lg">
+        <Header />
+      </div>
+
       {renderSwitchOperation()}
-      <HeaderSm />
+      <div className="header-sm">
+        <Header />
+      </div>
     </div>
   )
 }
