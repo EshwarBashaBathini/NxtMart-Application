@@ -32,16 +32,20 @@ const Header = props => {
           <ul className="ul-nav-lg">
             <li onClick={() => setNewTab('Home')} className="li-nav-lg">
               <Link to="/" className="links">
-                <h1 className={`header-route-p ${homeTab}`}>Home</h1>
+                <button type="button" className={`btn-header ${homeTab}`}>
+                  Home
+                </button>
               </Link>
             </li>
             <li onClick={() => setNewTab('Cart')} className="li-nav-lg">
               <Link to="/cart" className="links">
-                <h1 className={`header-route-p ${cartTab}`}>Cart</h1>
+                <button type="button" className={`btn-header ${cartTab}`}>
+                  Cart
+                </button>
               </Link>
             </li>
             <li className="li-nav-lg" onClick={onLogoutBtn}>
-              <button type="button" className="nav-btn">
+              <button type="button" className="btn-header">
                 <BiLogOut />
                 Logout
               </button>
@@ -56,7 +60,7 @@ const Header = props => {
               <Link to="/" className="links" onClick={() => setNewTab('Home')}>
                 <button
                   type="button"
-                  className={`nav-btn header-route-p ${homeTab}`}
+                  className={`nav-btn ${homeTab}`}
                   aria-label="Home"
                 >
                   <IoIosHome size={20} />
@@ -72,7 +76,7 @@ const Header = props => {
               >
                 <button
                   type="button"
-                  className={`nav-btn header-route-p ${cartTab}`}
+                  className={`nav-btn ${cartTab}`}
                   aria-label="Cart"
                 >
                   <CiShoppingCart size={20} />
