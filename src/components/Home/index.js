@@ -26,8 +26,7 @@ const Home = () => {
 
   const nxtMartAPIURL = async () => {
     setApiStatus(constApiStatus.IN_PROGRESS)
-    const apiUrl =
-      'https://run.mocky.io/v3/63c11c14-950f-40ae-b766-31f32473db85'
+    const apiUrl = 'https://apis2.ccbp.in/nxt-mart/category-list-details'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',

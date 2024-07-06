@@ -1,23 +1,14 @@
 import './cart.css'
-import {useContext, useState} from 'react'
+import {useContext} from 'react'
 import {useHistory} from 'react-router-dom'
-import {IoIosArrowRoundBack} from 'react-icons/io'
-import {IoCheckmarkCircleOutline} from 'react-icons/io5'
-
+import CartListView from '../CartListView'
 import ReactContext from '../../context/ReactContext'
 import Footer from '../Footer'
 import Header from '../Header'
-import CartItem from '../CartItem'
-import CartSummary from '../CartSummary'
 
 const Cart = () => {
   const {cartList, setCartList, setNewTab} = useContext(ReactContext)
   const history = useHistory()
-  const [isCheckOut, setCheckOut] = useState(false)
-
-  const toggleCheckout = () => {
-    setCheckOut(true)
-  }
 
   const onReturnHome = () => {
     setNewTab('Home')
@@ -27,53 +18,11 @@ const Cart = () => {
 
   const renderSuccess = () => (
     <>
-      {isCheckOut ? (
-        <div className="checkout-bg">
-          <IoCheckmarkCircleOutline color="green" size={30} />
-          <h1 className="checkout-head">Payment Successful</h1>
-          <p className="thank-you">Thank you for ordering</p>
-          <p className="thank-you">Your Payment is Sucessfully completed.</p>
-          <button className=" btn-return" onClick={onReturnHome} type="button">
-            Return to Homepage
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="cart-success">
-            <h1 className="items-head">Items</h1>
-            <div className="cart-container">
-              <ul className="cart-ul">
-                {cartList.map(item => (
-                  <CartItem key={item.id} product={item} />
-                ))}
-              </ul>
-              <CartSummary toggleCheckout={toggleCheckout} />
-            </div>
-          </div>
-          <div className="cart-success-sm">
-            <div className="checkout-container-sm">
-              <button
-                type="button"
-                aria-label="Return to Home"
-                onClick={onReturnHome}
-                className="btn-arrow"
-              >
-                <IoIosArrowRoundBack size={25} />
-              </button>
-              <h1 className="checkout-heading-sm">Checkout</h1>
-            </div>
-            <p className="items-cart-sm">Items ({cartList.length})</p>
-            <div className="cart-items-sm">
-              <ul className="cart-ul ">
-                {cartList.map(item => (
-                  <CartItem key={item.id} product={item} />
-                ))}
-              </ul>
-              <CartSummary toggleCheckout={toggleCheckout} />
-            </div>
-          </div>
-        </>
-      )}
+      <div className="cart-content-container">
+        <h1 className="cart-heading">Items</h1>
+
+        <CartListView />
+      </div>
 
       <Footer />
     </>

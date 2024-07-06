@@ -15,33 +15,29 @@ const CartItem = props => {
   }
 
   return (
-    <li data-testid="cartItem" className="cart-list">
-      <div className="cart-li">
-        <div className="cart-details">
-          <img src={image} alt={name} className="cart-img" />
-          <div className="cart-name-details">
-            <p className="cart-name">{name}</p>
-            <p className="cart-weight">{weight}</p>
-            <p className="cart-price">{price}</p>
-          </div>
+    <li className="cart-item" data-testid="cartItem">
+      <img className="cart-product-image" src={image} alt={name} />
+      <div className="cart-item-details-container">
+        <div className="cart-product-title-brand-container">
+          <p className="cart-product-title">{name}</p>
+          <p className="cart-product-brand"> {weight}</p>
+          <p>{price}</p>
         </div>
-        <div className="cart-btn-container">
+        <div className="cart-quantity-container" data-testid="item-quantity">
           <button
             type="button"
+            className="quantity-controller-button"
             data-testid="decrement-quantity"
             onClick={onDecrement}
-            className="btn"
           >
             -
           </button>
-          <div className="quantity" data-testid="item-quantity">
-            {quantity}
-          </div>
+          <p className="cart-quantity">{quantity}</p>
           <button
             type="button"
+            className="quantity-controller-button"
             data-testid="increment-quantity"
             onClick={onIncrement}
-            className="btn"
           >
             +
           </button>
