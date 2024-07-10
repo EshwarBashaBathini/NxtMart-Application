@@ -7,9 +7,10 @@
   color: white;
   padding: 10px;
   font-size: 10px;
-  position: relative;
+  position: fixed;
+  bottom: 0;
   height: 100px;
-
+  width: 100%;
   clear: both;
   font-family: 'Roboto';
 }

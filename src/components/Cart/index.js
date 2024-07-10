@@ -17,7 +17,7 @@ const Cart = () => {
   }
 
   const renderSuccess = () => (
-    <>
+    <div className="height-container">
       <div className="cart-content-container">
         <h1 className="cart-heading">Items</h1>
 
@@ -25,7 +25,7 @@ const Cart = () => {
       </div>
 
       <Footer />
-    </>
+    </div>
   )
 
   const renderEmptyCart = () => (
@@ -48,15 +48,9 @@ const Cart = () => {
 
   return (
     <div className="home-container1">
-      <div className="header-lg">
-        <Header />
-      </div>
+      <Header />
 
       {cartList.length === 0 ? renderEmptyCart() : renderSuccess()}
-
-      <div className="header-sm">
-        <Header />
-      </div>
     </div>
   )
 }

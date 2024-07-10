@@ -23,7 +23,7 @@ const CartItem = props => {
           <p className="cart-product-brand"> {weight}</p>
           <p>{price}</p>
         </div>
-        <div className="cart-quantity-container" data-testid="item-quantity">
+        <div className="cart-quantity-container">
           <button
             type="button"
             className="quantity-controller-button"
@@ -32,7 +32,9 @@ const CartItem = props => {
           >
             -
           </button>
-          <p className="cart-quantity">{quantity}</p>
+          <div data-testid="item-quantity">
+            <p className="cart-quantity">{quantity}</p>
+          </div>
           <button
             type="button"
             className="quantity-controller-button"

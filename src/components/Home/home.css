@@ -6,11 +6,9 @@
   height: 90vh;
 }
 
-.home-container {
+.home-container1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
 }
 .failure-container {
   height: 70vh;
@@ -21,9 +19,11 @@
 }
 .items {
   display: flex;
-  align-items: center;
+
   width: 100%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   /* Optional: Set a background color for better visibility */
 }
 .instr-head {
@@ -35,10 +35,6 @@
   display: none; /* Hide scrollbar for WebKit browsers */
 }
 
-.items {
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
 .failure-img {
   width: 30%;
 }
@@ -69,6 +65,12 @@
   .header-lg {
     display: none;
   }
+  .header-sm {
+    display: block;
+  }
+  .items {
+    height: 80vh;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -77,5 +79,8 @@
   }
   .header-sm {
     display: none;
+  }
+  .items {
+    height: 84vh;
   }
 }

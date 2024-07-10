@@ -1,6 +1,5 @@
 .ul-content {
-  padding-left: 10px;
-
+  padding-left: 5px;
   overflow-y: auto;
   margin: 0px !important;
 }
@@ -43,7 +42,7 @@
 
 @media screen and (min-width: 767px) {
   .ul-content {
-    height: 67vh;
+    height: 84vh;
   }
 }
 @media screen and (max-width: 767px) {

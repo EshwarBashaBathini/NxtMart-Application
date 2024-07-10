@@ -1,7 +1,7 @@
 .cart-item {
   display: flex;
   border: none;
-  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid gray;
   padding: 16px;
   margin-bottom: 16px;
@@ -31,6 +31,8 @@
 .cart-item-details-container {
   margin-left: 16px;
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 

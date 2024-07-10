@@ -108,14 +108,9 @@ const Home = () => {
 
   return (
     <div className="home-container1">
-      <div className="header-lg">
-        <Header />
-      </div>
+      <Header />
 
       {renderSwitchOperation()}
-      <div className="header-sm">
-        <Header />
-      </div>
     </div>
   )
 }
