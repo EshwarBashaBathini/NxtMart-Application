@@ -1,0 +1,38 @@
+pipeline:
+  name: eshwarrr
+  identifier: eshwarrr
+  projectIdentifier: Harness_splunk
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Harness_web_UI
+        repoName: NxtMart-Application
+        build: <+input>
+  stages:
+    - stage:
+        name: hihihihihih
+        identifier: hihihihihih
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: false
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo "hi"
